@@ -57,7 +57,7 @@ args = {
 }
 
 dag = DAG(
-    'solucao_baby_steps_dag',
+    'desafio_baby_steps_dag',
     default_args=args, # atualizar com a variável dos parâmetros definidos anteriormente
     template_searchpath=template_searchpath,
     schedule_interval='', # em formato cron: a cada hora, no minuto 0, apenas dias de semana. Gerador CRON: https://crontab-generator.org
@@ -76,9 +76,10 @@ query_task = PostgresOperator(
 )
 
 export_task = PythonOperator(
-    task_id='export_csv_task',
-    python_callable=export_csv,
-    dag=dag
+    task_id='', # nome único que irá aparecer na UI. Atenção: sem acentuo, espaço e
+                # char especial
+    python_callable=, # nome da função de exportação csv (linha 37)
+    # confira se não está faltando mais nada aqui. A quem essa task pertence?
 )
 
 # Orchestration
