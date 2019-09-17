@@ -1,0 +1,4 @@
+dags/__pycache__/
+dags/desafio/__pycache__/
+dags/solucao/__pycache__/
+dags/export/uf_superficie_total_indigenas.csv
