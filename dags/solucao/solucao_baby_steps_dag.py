@@ -67,14 +67,14 @@ dag = DAG(
 # Tasks
 
 query_task = PostgresOperator(
-    task_id='query_task',
+    task_id='gera_dados_consolidados_task',
     postgres_conn_id=PG_CONN_ID,
     sql='solucao_query_uf_superficie_total.sql',
     dag=dag
 )
 
 export_task = PythonOperator(
-    task_id='export_csv_task',
+    task_id='exporta_csv_task',
     python_callable=export_csv,
     dag=dag
 )
