@@ -22,7 +22,6 @@ from airflow.hooks.postgres_hook import PostgresHook
 
 from datetime import datetime, timedelta
 
-
 # Variables
 
 # Aqui vai uma ajuda. Só apontar para o nome da conexão criada
