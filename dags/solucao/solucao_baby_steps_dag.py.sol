@@ -59,7 +59,7 @@ dag = DAG(
     'solucao_baby_steps_dag',
     default_args=args, # atualizar com a variável dos parâmetros definidos anteriormente
     template_searchpath=template_searchpath,
-    schedule_interval='0 * * * 1-5', # em formato cron: a cada hora, no minuto 0, apenas dias de semana
+    schedule_interval='* * * * 1-5', # em formato cron: a cada hora, no minuto 0, apenas dias de semana
     catchup=False # só estamos falando que a pizza é paulista. Brincadeira.. é pra não
                   # refazer o passado
 )
